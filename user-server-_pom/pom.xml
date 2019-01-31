@@ -16,6 +16,49 @@
 	<name>user system server</name>
 	<url>http://www.cykcorp.org</url>
 	
+	<properties>
+		<data.source.name>userServerDataSource</data.source.name>
+		<data.source.jndi.name>java:/user/server/dataSource</data.source.jndi.name>
+		<server.port.offset>1</server.port.offset>
+	</properties>
+	
+	<profiles>
+
+		<!-- Data source -->
+		
+		<profile>
+			<id>data.source.mysql.local</id>
+			<properties>
+				<data.source.className>com.mysql.jdbc.jdbc2.optional.MysqlDataSource</data.source.className>
+				<data.source.url>jdbc:mysql://localhost:3306/sib_user</data.source.url>
+				<data.source.user>root</data.source.user>
+				<data.source.password>root</data.source.password>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>data.source.oracle.local</id>
+			<properties>
+				<data.source.driver.name>oracle</data.source.driver.name>
+				<data.source.className>oracle.jdbc.pool.OracleDataSource</data.source.className>
+				<data.source.url>jdbc:oracle:thin:@localhost:1521:xe</data.source.url>
+				<data.source.user>sibuser</data.source.user>
+				<data.source.password>sibuser</data.source.password>
+			</properties>
+		</profile>
+	
+		<profile>
+			<id>data.source.oracle.remote.sib.database</id>
+			<properties>
+				<data.source.className>oracle.jdbc.pool.OracleDataSource</data.source.className>
+				<data.source.url>jdbc:oracle:thin:@sib-database:1521:xe</data.source.url>
+				<data.source.user>sibuser</data.source.user>
+				<data.source.password>sibuser</data.source.password>
+			</properties>
+		</profile>
+		
+	</profiles>
+	
 	<modules>
 		<!-- Persistence Layer -->
 		<module>../user-server-persistence-entities</module>

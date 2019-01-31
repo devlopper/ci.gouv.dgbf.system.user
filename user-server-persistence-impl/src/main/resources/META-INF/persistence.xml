@@ -3,6 +3,7 @@
     <persistence-unit name="userPersistenceUnit" transaction-type="JTA">
     	<jta-data-source>${data.source.jndi.name}</jta-data-source>
     	<exclude-unlisted-classes>true</exclude-unlisted-classes>
+    	<class>ci.gouv.dgbf.system.user.server.persistence.entities.account.Role</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="update"/>
 			<property name="hibernate.show_sql" value="false"/>
