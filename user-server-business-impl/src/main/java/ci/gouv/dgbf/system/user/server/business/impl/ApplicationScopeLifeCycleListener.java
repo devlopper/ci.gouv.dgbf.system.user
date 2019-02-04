@@ -34,8 +34,8 @@ public class ApplicationScopeLifeCycleListener extends AbstractApplicationScopeL
 				,new Role().setCode("CF").setName("Contrôleur financier")
 				,new Role().setCode("CB").setName("Contrôleur budgétaire")
 				,new Role().setCode("CA").setName("Comptable Assignataire")
-				));
-		*/
+				));*/
+		
 	}
 	
 	@Override

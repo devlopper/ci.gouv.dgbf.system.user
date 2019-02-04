@@ -20,6 +20,7 @@
 		<data.source.name>userServerDataSource</data.source.name>
 		<data.source.jndi.name>java:/user/server/dataSource</data.source.jndi.name>
 		<server.port.offset>1</server.port.offset>
+		<hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>
 	</properties>
 	
 	<profiles>
@@ -42,18 +43,18 @@
 				<data.source.driver.name>oracle</data.source.driver.name>
 				<data.source.className>oracle.jdbc.pool.OracleDataSource</data.source.className>
 				<data.source.url>jdbc:oracle:thin:@localhost:1521:xe</data.source.url>
-				<data.source.user>sibuser</data.source.user>
-				<data.source.password>sibuser</data.source.password>
+				<data.source.user>SIB_UTILISATEUR_GESTION</data.source.user>
+				<data.source.password>SIB_UTILISATEUR_GESTION</data.source.password>
 			</properties>
 		</profile>
 	
 		<profile>
-			<id>data.source.oracle.remote.sib.database</id>
+			<id>data.source.oracle.remote</id>
 			<properties>
 				<data.source.className>oracle.jdbc.pool.OracleDataSource</data.source.className>
 				<data.source.url>jdbc:oracle:thin:@sib-database:1521:xe</data.source.url>
-				<data.source.user>sibuser</data.source.user>
-				<data.source.password>sibuser</data.source.password>
+				<data.source.user>SIB_UTILISATEUR_GESTION</data.source.user>
+				<data.source.password>SIB_UTILISATEUR_GESTION</data.source.password>
 			</properties>
 		</profile>
 		
