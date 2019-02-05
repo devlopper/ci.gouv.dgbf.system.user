@@ -19,7 +19,7 @@
 	<properties>
 		<data.source.name>userServerDataSource</data.source.name>
 		<data.source.jndi.name>java:/user/server/dataSource</data.source.jndi.name>
-		<server.port.offset>1</server.port.offset>
+		<server.port.offset>0</server.port.offset>
 		<hibernate.hbm2ddl.auto>update</hibernate.hbm2ddl.auto>
 	</properties>
 	
