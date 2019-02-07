@@ -24,7 +24,6 @@
 		
 		<!-- Deployment -->
 		<module>../user-client-deployment</module>
-				
 	</modules>
 
 	<repositories>
