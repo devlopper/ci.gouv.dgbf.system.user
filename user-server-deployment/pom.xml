@@ -13,7 +13,11 @@
 	<groupId>ci.gouv.dgbf.system.user.server.deployment</groupId>
 	<artifactId>user-server-deployment</artifactId>
 	<packaging>war</packaging>
-
+	
+	<properties>
+		<microprofile.archive.name>user-server</microprofile.archive.name>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>ci.gouv.dgbf.system.user.server.representation</groupId>
